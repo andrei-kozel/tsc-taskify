@@ -1,0 +1,11 @@
+.input {
+  @apply flex w-10/12 relative items-center;
+}
+
+.input__box {
+  @apply w-full border rounded-full py-5 px-8 text-2xl border-none shadow-md transition outline-none outline-1 focus:bg-slate-200;
+}
+
+.input__submit {
+  @apply absolute w-[50px] h-[50px] m-3 rounded-full right-0 border-none text-base bg-sky-600 transition text-white shadow-lg hover:bg-sky-400 active:scale-95 hover:shadow-sm;
+}

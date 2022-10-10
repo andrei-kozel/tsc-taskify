@@ -1,0 +1,7 @@
+.app {
+  @apply w-screen h-screen flex flex-col items-center bg-sky-700;
+}
+
+.app__title {
+  @apply text-3xl text-white text-center py-3 uppercase z-10;
+}
