@@ -9,3 +9,23 @@
 .input__submit {
   @apply absolute w-[50px] h-[50px] m-3 rounded-full right-0 border-none text-base bg-sky-600 transition text-white shadow-lg hover:bg-sky-400 active:scale-95 hover:shadow-sm;
 }
+
+.todos {
+  @apply flex justify-evenly w-10/12 flex-wrap
+}
+
+.todos__single {
+  @apply flex p-5 my-4 bg-amber-300 rounded-md shadow-lg w-full md:w-2/5 lg:w-1/3
+}
+
+.todos__single--text {
+  @apply flex-1 p-1 text-lg focus:outline-none;
+}
+
+.icons {
+  @apply flex justify-center items-center
+}
+
+.icon {
+  @apply ml-3 text-xl cursor-pointer
+}
