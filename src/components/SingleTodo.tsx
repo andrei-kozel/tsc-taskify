@@ -17,6 +17,10 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
     );
   };
 
+  const handleDelete = (id: string) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <form className="todos__single">
       {todo.isDone ? (
@@ -31,7 +35,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
         <span className="icon">
           <FaEdit />
         </span>
-        <span className="icon">
+        <span className="icon" onClick={() => handleDelete(todo.id)}>
           <FaTrash />
         </span>
         <span className="icon" onClick={() => handleDone(todo.id)}>
