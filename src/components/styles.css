@@ -27,5 +27,9 @@
 }
 
 .icon {
-  @apply ml-3 text-xl cursor-pointer
+  @apply ml-3 text-xl cursor-pointer 
+}
+
+.icon svg {
+  @apply transition shadow-2xl hover:fill-sky-700 hover:shadow-sm
 }
