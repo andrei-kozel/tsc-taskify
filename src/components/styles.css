@@ -22,6 +22,8 @@
   @apply flex-1 p-1 text-lg focus:outline-none;
 }
 
+
+
 .todos__single--done {
   @apply line-through 
 }
