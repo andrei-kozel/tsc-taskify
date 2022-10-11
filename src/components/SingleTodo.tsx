@@ -4,12 +4,29 @@ import { Todo } from "../model";
 
 interface Props {
   todo: Todo;
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const SingleTodo = ({ todo }: Props) => {
+const SingleTodo = ({ todo, todos, setTodos }: Props) => {
+  const handleDone = (id: string) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+      )
+    );
+  };
+
   return (
     <form className="todos__single">
-      <span className="todos__single--text">{todo.todo}</span>
+      {todo.isDone ? (
+        <span className="todos__single--text todos__single--done">
+          {todo.todo}
+        </span>
+      ) : (
+        <span className="todos__single--text">{todo.todo}</span>
+      )}
+
       <div className="icons">
         <span className="icon">
           <FaEdit />
@@ -17,7 +34,7 @@ const SingleTodo = ({ todo }: Props) => {
         <span className="icon">
           <FaTrash />
         </span>
-        <span className="icon">
+        <span className="icon" onClick={() => handleDone(todo.id)}>
           <FaCheck />
         </span>
       </div>
